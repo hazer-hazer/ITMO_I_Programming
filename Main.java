@@ -32,6 +32,13 @@ public class Main{
 		/* TODO - Alice
 		, забыв о своем торжественном обещании, и тут же осеклась.
 		*/
+		scene.addAction("mental", alice)
+			 .getLastMentalAction()
+			 .setType("forget")
+			 .setPreposition("about")
+			 .setSubject("solemn promise");
+
+		scene.bindLast();
 
 		/*
 		Но Соня, казалось, ничего не заметила.
@@ -39,6 +46,7 @@ public class Main{
 		scene.addAction("mental", sonya)
 			 .getLastMentalAction()
 			 .setType("overlook");
+			 
 		/*
 		- Это был мармаладный колодец,- объяснила она.
 		*/
