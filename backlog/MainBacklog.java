@@ -67,7 +67,7 @@ public class Main{
 			 .setUtterance("interrupted")
 			 .setPostText("Let's move up");
 
-		/*
+		/* TODO - Add physics action
 		Он тут же пересел на соседний стул;
 		Соня села на его место. Заяц - на место Сони,
 		а Алиса - без особой охоты - пересела на стул Зайца.
@@ -80,7 +80,7 @@ public class Main{
 			 .getLastMentalAction()
 			 .setType("goodluck");
 
-		/*
+		/* TODO Make subAction
 		а Алиса, наоборот, сильно прогадала,
 		так как Заяц только что опрокинул молочник.
 		*/
@@ -88,7 +88,7 @@ public class Main{
 			 .getLastMentalAction()
 			 .setType("badluck");
 
-		/*
+		/* TODO subAction
 		- Я не понимаю,- очень робко, [боясь опять рассердить Соню],
 		начала Алиса,- как же они таскали оттуда мармелад?
 		*/
@@ -112,7 +112,7 @@ public class Main{
 			 .setUtterance("said")
 			 .setPostText("and from marmelad-well anyone can drag marmelad, I hope. Are you stupid?");
 
-		/*
+		/* TODO - add subAction
 		 - Я говорю, как они могли таскать мармелад оттуда?
 		 Ведь они там жили- сказала Алиса,
 		 - решив оставить без ответа последние слова Шляпы.
@@ -141,6 +141,12 @@ public class Main{
 			 .setType("stunned");
 
 		scene.bindLast();
+
+		/** TODO - ???
+		 что она позволила Соне некоторое время продолжать рассказ
+		 без вынужденных остановок. Это было весьма кстати,
+		 так как рассказчица отчаянно зевала и усиленно терла глаза.
+		*/
 
 		/**
 		 - Так вот,- продолжала Соня,

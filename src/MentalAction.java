@@ -12,7 +12,7 @@ public class MentalAction extends Action{
 
 	@Override
 	public void execute(){
-		executor.print(type.toString(), preposition, subject);
+		executor.print(type.toString(), "(Mental)", preposition, subject);
 	}
 
 	public MentalAction setType(String type){
@@ -21,7 +21,7 @@ public class MentalAction extends Action{
 	}
 
 	private static enum Type{
-		THINK, FORGET, OVERLOOK, BADLUCK, GOODLUCK;
+		THINK, FORGET, OVERLOOK, BADLUCK, GOODLUCK, STUNNED, MADDEN;
 	}
 
 	public MentalAction setSubject(String subject){
@@ -39,5 +39,10 @@ public class MentalAction extends Action{
 		return super.toString() + ";\n[" +
 			"\n\t type: " + type +
 		"\n]";
+	}
+
+	@Override
+	public int hashCode(){
+		return (super.hashCode() + type.hashCode() + subject.hashCode() + preposition.hashCode()) * 666 % 77;
 	}
 }

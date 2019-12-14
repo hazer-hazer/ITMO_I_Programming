@@ -3,10 +3,12 @@ package src;
 import java.util.ArrayList;
 import java.util.*;
 
-public class Scene{
-	private List <Action> actions = new ArrayList <Action>();
+public class Scene extends Entity{
+	private List <Action> actions = new ArrayList <>();
 
-	public Scene(){}
+	public Scene(){
+		super("Scene");
+	}
 
 	private Action createAction(String type, Human executor){
 		if("mental".equalsIgnoreCase(type))
@@ -45,5 +47,15 @@ public class Scene{
 	public void run(){
 		for(Action a : actions)
 			a.execute();
+	}
+
+	@Override
+	public int hashCode(){
+		return (super.hashCode() + actions.hashCode()) * 666 % 77;
+	}
+
+	@Override
+	public String toString(){
+		return super.toString() + " [\n" + actions.toString() + "]";
 	}
 }

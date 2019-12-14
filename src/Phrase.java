@@ -1,10 +1,10 @@
 package src;
 
 public class Phrase extends Entity{
-	private String preText = "";
-	private String postText = "";
-	private Adverb adverb;
-	private Utterance utterance;
+	protected String preText = "";
+	protected String postText = "";
+	protected Adverb adverb;
+	protected Utterance utterance;
 
 	public Phrase(){
 		super("Phrase");
@@ -40,12 +40,12 @@ public class Phrase extends Entity{
 		return this;
 	}
 
-	private enum Adverb{
-		FINALLY, SHYLY;
+	protected enum Adverb{
+		FINALLY, SHYLY, RAPID;
 	}
 
-	private enum Utterance{
-		CONTINUED, ASKED, STARTED, INTERRUPTED, EXPLAINED, SAID;
+	protected enum Utterance{
+		CONTINUED, ASKED, STARTED, INTERRUPTED, EXPLAINED, SAID, SHOUTED, ANSWERED;
 	}
 
 	@Override
@@ -56,5 +56,11 @@ public class Phrase extends Entity{
 			"\n\tAdverb: " + adverb +
 			"\n\tUtterance: " + utterance +
 		"\n]";
+	}
+
+	@Override
+	public int hashCode(){
+		return (super.hashCode() + preText.hashCode() + utterance.hashCode()
+				+ adverb.hashCode() + postText.hashCode()) * 666 % 77;
 	}
 }

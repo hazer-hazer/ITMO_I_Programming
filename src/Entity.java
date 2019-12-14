@@ -32,4 +32,14 @@ public abstract class Entity{
 	public String toString(){
 		return "(" + name + ") ";
 	}
+
+	@Override
+	public int hashCode(){
+		return name.hashCode() * 666 % 77;
+	}
+
+	@Override
+	public boolean equals(Entity e){
+		return hashCode() == e.hashCode() && this == e && e.name.equals(name);
+	}
 }
