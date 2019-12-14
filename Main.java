@@ -7,6 +7,10 @@ public class Main{
 		Human hat = new Human("Hat");
 		Scene scene = new Scene();
 		
+		MentalAction ma = new MentalAction(sonya);
+
+		ma.setSubAction(ma);
+
 		/*
 		- Так вот,- наконец возобновила свой рассказ Соня,
 		- они таскали мармалад оттуда...

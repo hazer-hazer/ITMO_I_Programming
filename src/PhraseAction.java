@@ -32,10 +32,4 @@ public class PhraseAction extends Action{
 		return (super.hashCode() + phrase.hashCode()) * 666 % 77;
 	}
 
-	@Override
-	public String toString(){
-		return super.toString() + ";\n PhraseAction: [\n" +
-			   "phrase: " + phrase.toString() + 
-			   "\n];";
-	}
 }

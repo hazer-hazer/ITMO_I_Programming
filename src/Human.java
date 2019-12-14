@@ -29,7 +29,6 @@ public class Human extends Entity{
 		return super.toString() + "; Human"; 
 	}
 
-	@Override
 	public boolean equals(Human h){
 		return h.hashCode() == hashCode() && this == h && super.equals(h);
 	}

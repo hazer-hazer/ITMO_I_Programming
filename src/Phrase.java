@@ -1,6 +1,6 @@
 package src;
 
-public class Phrase extends Entity{
+public class Phrase extends Entity implements IPhrase{
 	protected String preText = "";
 	protected String postText = "";
 	protected Adverb adverb;
@@ -8,19 +8,6 @@ public class Phrase extends Entity{
 
 	public Phrase(){
 		super("Phrase");
-	}
-
-	public String getPreText(){
-		return preText;
-	}
-	public String getPostText(){
-		return postText;
-	}
-	public String getAdverb(){
-		return adverb != null ? adverb.toString() : "";
-	}
-	public String getUtterance(){
-		return utterance != null ? utterance.toString() : "";
 	}
 
 	public Phrase setPreText(String preText){
@@ -39,12 +26,28 @@ public class Phrase extends Entity{
 		this.utterance = Utterance.valueOf(utterance.toUpperCase());
 		return this;
 	}
+	
+	public String getPreText(){
+		return preText;
+	}
 
-	protected enum Adverb{
+	public String getPostText(){
+		return postText;
+	}
+
+	public String getAdverb(){
+		return adverb != null ? adverb.toString() : "";
+	}
+	
+	public String getUtterance(){
+		return utterance != null ? utterance.toString() : "";
+	}
+
+	protected static enum Adverb{
 		FINALLY, SHYLY, RAPID;
 	}
 
-	protected enum Utterance{
+	protected static enum Utterance{
 		CONTINUED, ASKED, STARTED, INTERRUPTED, EXPLAINED, SAID, SHOUTED, ANSWERED;
 	}
 

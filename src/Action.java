@@ -39,12 +39,11 @@ public abstract class Action extends Entity{
 
 	@Override
 	public int hashCode(){
-		return (super.hashCode() + executor.hashCode() + subAction.hashCode()) * 666 % 77
+		return (super.hashCode() + executor.hashCode()) * 666 % 77;
 	}
 
-	@Override
 	public boolean equals(Action a){
-		return this == a && a.hashCode == hashCode() && name.equals(a.name)
-			   && executor.equals(a.executor) && subAction.equals(a.subAction);
+		return this == a && a.hashCode() == hashCode() && name.equals(a.name)
+			   && executor.equals(a.executor);
 	}
 }

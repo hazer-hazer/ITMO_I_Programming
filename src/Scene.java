@@ -58,4 +58,8 @@ public class Scene extends Entity{
 	public String toString(){
 		return super.toString() + " [\n" + actions.toString() + "]";
 	}
+
+	public boolean equals(Scene s){
+		return super.equals(s) && actions.equals(s.actions);
+	}
 }

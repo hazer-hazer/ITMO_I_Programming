@@ -38,7 +38,6 @@ public abstract class Entity{
 		return name.hashCode() * 666 % 77;
 	}
 
-	@Override
 	public boolean equals(Entity e){
 		return hashCode() == e.hashCode() && this == e && e.name.equals(name);
 	}
