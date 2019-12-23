@@ -1,5 +1,5 @@
 package src;
 
-public interface IActionFactory <T>{
+public interface IExecutorFactory <T>{
 	T createAction(String type, Human executor);
 }

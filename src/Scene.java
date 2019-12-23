@@ -3,7 +3,7 @@ package src;
 import java.util.ArrayList;
 import java.util.*;
 
-public class Scene extends Entity implements IScene, IActionFactory<Action>{
+public class Scene extends Entity implements IScene, IExecutorFactory<Action>{
 	private List <Action> actions = new ArrayList <>();
 
 	public Scene(){
