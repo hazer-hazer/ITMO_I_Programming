@@ -3,14 +3,15 @@ package src;
 import java.util.ArrayList;
 import java.util.*;
 
-public class Scene extends Entity{
+public class Scene extends Entity implements IScene, IActionFactory<Action>{
 	private List <Action> actions = new ArrayList <>();
 
 	public Scene(){
 		super("Scene");
 	}
 
-	private Action createAction(String type, Human executor){
+	@Override
+	public Action createAction(String type, Human executor){
 		if("mental".equalsIgnoreCase(type))
 			return new MentalAction(executor);
 		else if("phrase".equalsIgnoreCase(type))
@@ -19,6 +20,7 @@ public class Scene extends Entity{
 		return null;
 	}
 
+	@Override
 	public Scene addAction(String type, Human executor){
 		actions.add(createAction(type, executor));
 		return this;
@@ -37,6 +39,7 @@ public class Scene extends Entity{
 	}
 
 	// Make last Action a subAction of one before it
+	@Override
 	public void bindLast(){
 		if(actions.size() < 2) return;
 
@@ -44,6 +47,7 @@ public class Scene extends Entity{
 		actions.remove(actions.size() - 1);
 	}
 
+	@Override
 	public void run(){
 		for(Action a : actions)
 			a.execute();

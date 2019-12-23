@@ -6,10 +6,13 @@ public class Main{
 		Human alice = new Human("Alice");
 		Human hat = new Human("Hat");
 		Scene scene = new Scene();
-		
-		MentalAction ma = new MentalAction(sonya);
+			
+		// Throw RecursiveBindingException
 
-		ma.setSubAction(ma);
+		// MentalAction ma = new MentalAction(sonya);
+		// ma.setSubAction(ma);
+
+		
 
 		/*
 		- Так вот,- наконец возобновила свой рассказ Соня,
