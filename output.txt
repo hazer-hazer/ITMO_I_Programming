@@ -1,0 +1,19 @@
+[Sonya]:Say `So` - FINALLY CONTINUED Sonya  - `They stole jelly`
+[Alice]:Say `Where did marmelad come from?` -  STARTED Alice
+[Alice]:FORGET (Mental) about solemn promise
+[Sonya]:OVERLOOK (Mental)
+[Sonya]:Say `It was marmelad-well` -  EXPLAINED Sonya
+[Hat]:Say `I need clean cup` -  INTERRUPTED Hat  - `Let's move up`
+[Hat]:GOODLUCK (Mental)
+[Alice]:BADLUCK (Mental)
+[Alice]:Say `I don't understand` - SHYLY STARTED Alice  - `how did they drag marmelad from there?`
+[Hat]:Say `Water is dragged from an ordinary well` -  SAID Hat  - `and from marmelad-well anyone can drag marmelad, I hope. Are you stupid?`
+[Alice]:Say `I'm telling you, how could they drag marmelad from there? They lived there` -  SAID Alice
+[Sonya]:Say `Not only lived!` -  SAID Sonya  - `They lived, they were!`
+[Alice]:STUNNED (Mental)
+[Sonya]:Say `So` -  CONTINUED Sonya  - `they ate and drank this marmelad - did what they wanted`
+[Alice]:MADDEN (Mental)
+[Sonya]:Say `Who said that ate it?` -  ASKED Sonya
+[Alice]:Say `What does it mean - who? You said` -   Alice
+[Sonya]:Say `I said - they ate it!` -  ANSWERED Sonya
+[Sonya]:Say `Ate and sculpt! Sculpt anything they wanted from it - anything that starts with M` -  CONTINUED Sonya
